@@ -15,6 +15,8 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
             text-align: center;
         }
 
@@ -33,6 +35,33 @@
             font-weight: 400;
             border-top: 1px solid rgba(255, 255, 255, 0.4);
             padding-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 560px;
+            aspect-ratio: 16 / 9;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-link {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.1rem;
+        }
+
+        .video-link:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -40,7 +69,24 @@
 
     <h1>¡Hola, mundo!</h1>
     <p>Este es el contenido visible de mi sitio web.</p>
-    <h2>Paula Morales Espinosa</h2>
+    <h2>Paula Morales Espinosa - Trabajo Social UCA</h2>
+
+    <!-- Reproductor de vídeo insertado -->
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/zJOaqPMHs7Y" 
+            title="Reproductor de vídeo de YouTube" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Enlace directo al vídeo -->
+    <p>
+        <a class="video-link" href="https://www.youtube.com/live/zJOaqPMHs7Y?si=Ifpcj97UwvLVU9db" target="_blank" rel="noopener noreferrer">
+            Ver vídeo directamente en YouTube
+        </a>
+    </p>
 
 </body>
 </html>
